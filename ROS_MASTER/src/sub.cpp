@@ -10,10 +10,14 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "sub");
   ros::NodeHandle nh;
+  ros::Rate loop_rate(10);
+  ros::Subscriber sub = nh.subscribe("chatter1", 1000, chatterCallback);
+ while(ros::ok())
+ {
+   loop_rate.sleep();
+   ros::spinOnce();
+ }
 
-  ros::Subscriber sub = nh.subscribe("chatter", 1000, chatterCallback);
-
-  ros::spin();
-
+ std::cout<<"exit sub"<<std::endl;
   return 0;
 }
