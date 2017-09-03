@@ -1,0 +1,8 @@
+<launch>
+
+<node pkg="ROS_MASTER" type="pub" name="pub"/>
+<node pkg="ROS_MASTER" type="sub" name="sub"/>
+<node pkg="ROS_MASTER" type="master" name="master" output="screen"/>
+
+
+</launch>

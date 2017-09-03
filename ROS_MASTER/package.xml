@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>ROS_API</name>
+  <name>ROS_MASTER</name>
   <version>0.1.0</version>
-  <description>The ROS_API package</description>
+  <description>The ROS_MASTER package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
