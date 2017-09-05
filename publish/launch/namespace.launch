@@ -1,0 +1,8 @@
+<launch>
+<group ns="name_space">
+
+<node pkg="publish" type="publish" name="publish" output="screen"/>
+
+
+</group>
+</launch>

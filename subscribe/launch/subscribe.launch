@@ -1,0 +1,4 @@
+<launch>
+<node pkg="subscribe" type="talker" name="talker" />
+<node pkg="subscribe" type="subscribe" name="listner" output="screen"/>
+</launch>

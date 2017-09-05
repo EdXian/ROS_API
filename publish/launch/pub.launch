@@ -1,0 +1,3 @@
+<launch>
+<node pkg="publish" type="publish" name="publish" output="screen"/>
+</launch>

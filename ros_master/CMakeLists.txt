@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ROS_MASTER)
+project(ros_master)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)

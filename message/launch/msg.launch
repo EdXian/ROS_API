@@ -1,0 +1,3 @@
+<launch>
+<node name="message" pkg="message" type="Message" output="screen"/>
+</launch>
