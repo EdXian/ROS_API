@@ -1,0 +1,20 @@
+<launch>
+<group ns="team">
+    <group ns ="squad1">
+        <param name="publish_name" type="str" value="chatter1" />
+        <node pkg="communication" type="publisher" name="publisher" />
+    </group>
+    <group ns ="squad2">
+        <param name="publish_name" type="str" value="chatter2" />
+        <node pkg="communication" type="publisher" name="publisher" />
+    </group>
+    <group ns ="squad3">
+        <param name="publish_name" type="str" value="chatter3" />
+        <node pkg="communication" type="publisher" name="publisher" />
+    </group>
+    <group ns ="squad4">
+        <param name="publish_name" type="str" value="chatter4" />
+        <node pkg="communication" type="publisher" name="publisher" />
+    </group>
+</group>
+</launch>

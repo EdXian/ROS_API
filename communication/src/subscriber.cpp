@@ -27,22 +27,22 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "subscriber");
   ros::NodeHandle nh;
-  ros::Rate loop_rate(5);
+  std::string publish_name ;
+  nh.getParam("publish_name",publish_name);
 
-  ros::Duration(0.5).sleep();
   getRosTopics(topic_list);
   team_list.clear();
   teamVector.clear();
-
+  ros::Duration(1).sleep();
   for(ros::master::V_TopicInfo::iterator it=topic_list.begin();it!=topic_list.end();it++)
   {
     ros::master::TopicInfo& info=*it;
-    if(info.name.compare(0,13,"/team/chatter")==0)
+    if(info.name.compare(0,5,"/team")==0)
     {
       team_list.push_back(info.name);
     }
   }
-
+  ros::Duration(1).sleep();
   for(int i=0;i<team_list.size();i++)
   {
     for(int j=i;j<team_list.size();j++)
@@ -61,16 +61,17 @@ int main(int argc, char **argv)
     teamVector.push_back(new listener(team_list[i]));
     std::cout<<team_list[i]<<std::endl;
   }
-
+   ros::Rate loop_rate(5);
   while(ros::ok())
   {
-      std::cout<<"we have :"<<teamVector[0]->info.data
+    /*
+      std::cout<< "I am"<< publish_name << " and talking to :"
+                            <<teamVector[0]->info.data
                             <<teamVector[1]->info.data
                             <<teamVector[2]->info.data
                             <<teamVector[3]->info.data
-                            <<teamVector[4]->info.data
                             <<std::endl;
-
+    */
      loop_rate.sleep();
      ros::spinOnce();
   }
