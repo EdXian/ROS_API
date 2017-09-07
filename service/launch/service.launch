@@ -1,0 +1,4 @@
+<launch>
+<node pkg="service" name="service" type="service" output="screen"/>
+<node pkg="service" name="call_service" type="call_service" output="screen"/>
+</launch>

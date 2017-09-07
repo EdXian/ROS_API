@@ -1,0 +1,6 @@
+<launch>
+<group ns="team">
+<node  pkg="communication" type="publisher" name="publisher" />
+<node  pkg="communication" type="subscriber" name="subscriber" output="screen" />
+</group>
+</launch>
