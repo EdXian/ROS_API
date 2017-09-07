@@ -1,0 +1,3 @@
+<launch>
+<node pkg="time" name="ros_time" type="ros_time" output="screen"/>
+</launch>
