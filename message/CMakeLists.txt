@@ -6,9 +6,9 @@ project(message)
 
 find_package(catkin REQUIRED COMPONENTS
     roscpp
-     message_generation
     std_msgs
     geometry_msgs
+ message_generation
 
 )
 
@@ -31,7 +31,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package(
 
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
  # LIBRARIES message
  #  CATKIN_
       CATKIN_DEPENDS roscpp
