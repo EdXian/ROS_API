@@ -15,8 +15,6 @@ int main(int argc, char **argv)
   ros::ServiceClient client2 = nh.serviceClient<std_srvs::Empty>("/empty");
 
   ros::Rate loop_rate(10);
-
-
   while (ros::ok())
   {
 
@@ -26,9 +24,6 @@ int main(int argc, char **argv)
    client2.call(empty);
     printf("the response of multiple service is %ld\n",srv1.response.result);
     //printf("the response of service_class is %ld\n",srv2.response.result);
-
-
-
     loop_rate.sleep();
   }
 

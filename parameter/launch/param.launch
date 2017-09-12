@@ -1,0 +1,9 @@
+<launch>
+<group ns="test">
+<param name="float" type="double" value="3.14159"/>
+<param name="string" type="str" value="Hello"/>
+<param name="int" type="int" value="5"/>
+<param name="bool" type="bool" value="false"/>
+<node name = "param_node" type = "parameter_node" pkg = "parameter" output = "screen"/>
+</group>
+</launch>

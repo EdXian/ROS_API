@@ -19,7 +19,7 @@ int main(int argc, char **argv)
   ros::NodeHandle nh;
   service::service_client srv;
 
-  ros::ServiceServer service = nh.advertiseService("/multiple", multiple);
+ ros::ServiceServer service = nh.advertiseService("/multiple", multiple);
 
   ros::Rate loop_rate(10);
   while (ros::ok())
